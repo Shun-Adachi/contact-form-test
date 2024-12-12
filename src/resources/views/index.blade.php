@@ -9,7 +9,7 @@
   <div class="section__title">
     <h2>Contact</h2>
   </div>
-  <form class="form" action="/contacts/confirm" method="post">
+  <form class="form" action="/confirm" method="post">
     @csrf
     <!-- お名前 -->
     <div class="form__group">

@@ -16,28 +16,30 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
      return view('index');
 });
+Route::post('/index', function () {
+     return view('index');
+});
 
-
-Route::get('/confirm', function () {
+Route::post('/confirm', function () {
      return view('confirm');
 });
 
 
-Route::get('/admin', function () {
+Route::post('/admin', function () {
      return view('admin');
 });
 
 
-Route::get('/login', function () {
+Route::post('/login', function () {
      return view('login');
 });
 
 
-Route::get('/register', function () {
+Route::post('/register', function () {
      return view('register');
 });
 
 
-Route::get('/thanks', function () {
+Route::post('/thanks', function () {
      return view('thanks');
 });
