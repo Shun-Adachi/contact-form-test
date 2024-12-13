@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  /* 余白をなくす */
+  /* 余白をなくす*/
   height: 100vh;
   /* ビューポートの高さを全体に設定 */
   /* 子要素がない場合も高さを適用するため
@@ -11,8 +11,8 @@ body {
 .thanks__content {
   width: 100%;
   /* 横幅を画面全体に */
-  height: 100%;
-  /* 高さも全体に設定 */
+  height: 100vh;
+  /*高さも全体に設定 */
   max-width: 1230px;
   background-image: url("/images/backgrounds/thanks.png");
   /* 背景画像を指定 */
@@ -25,7 +25,6 @@ body {
   max-width: 1230px;
   margin: auto auto;
   text-align: center;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 10px;

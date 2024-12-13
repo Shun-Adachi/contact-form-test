@@ -1,3 +1,8 @@
+@php
+  $show_header = 0;
+  $show_header_button = "";
+@endphp
+
 @extends('layouts.app')
 
 @section('css')
@@ -10,8 +15,9 @@
     <h2>お問い合わせありがとうございました</h2>
   </div>
   <div class="thanks__button">
-    <button class="thanks__button-submit" type="submit" formaction="/">HOME</button>
+    <form action="/">
+      <button class="thanks__button-submit" type="submit" formaction="/">HOME</button>
+    </form>
   </div>
 </div>
-
 @endsection

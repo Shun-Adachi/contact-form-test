@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -10,16 +12,30 @@
   <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
   @yield('css')
 </head>
-
 <body>
+  @if($show_header)
   <header class="header">
     <div class="header__inner">
       <a class="header__logo" href="/">
         FashionablyLate
       </a>
+      @if($header_button === "login")
+      <a class="header__button" href="/login">
+        login
+      </a>
+      @elseif($header_button === "logout")
+      <a class="header__button" href="/login">
+        logout
+      </a>
+      @elseif($header_button === "register")
+      <a class="header__button" href="/register">
+        register
+      </a>
+      @endif
     </div>
-  </header>
 
+  </header>
+  @endif
   <main>
     @yield('content')
   </main>

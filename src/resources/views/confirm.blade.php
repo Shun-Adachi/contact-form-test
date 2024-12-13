@@ -1,3 +1,8 @@
+@php
+  $show_header = 1;
+  $header_button = "";
+@endphp
+
 @extends('layouts.app')
 
 @section('css')

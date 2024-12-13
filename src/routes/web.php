@@ -30,16 +30,20 @@ Route::post('/admin', function () {
 });
 
 
-Route::post('/login', function () {
+Route::get('/login', function () {
      return view('login');
 });
 
 
-Route::post('/register', function () {
+Route::get('/register', function () {
      return view('register');
 });
 
 
 Route::post('/thanks', function () {
      return view('thanks');
+});
+
+Route::post('/contact/search', function () {
+     return view('index');
 });

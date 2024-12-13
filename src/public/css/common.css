@@ -2,9 +2,19 @@ body {
   margin: 0;
 }
 
+input::placeholder {
+  opacity: 0.5;
+}
+
+textarea::placeholder {
+  opacity: 0.5;
+}
+
 .header {}
 
 .header__inner {
+  position: relative;
+  height: 30px;
   padding: 20px 0px;
   display: flex;
   justify-content: space-between;
@@ -20,16 +30,43 @@ body {
   font-size: 24px;
 }
 
+.header__button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  /* 親要素が複数行の場合 */
+  position: absolute;
+  right: 5%;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  /* 高さと同じ値で縦方向の中央寄せ */
+  margin: auto 0px auto auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Georgia, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #D3C7B7;
+  font-size: 14px;
+  background: #f5f5f5;
+  border: #D3C7B7 1px solid;
+}
+
 .contact-form__content {
   margin: 0 auto;
   text-align: center;
-  max-width: 1230px;
+  max-width: 800px;
 }
 
 .section__title {
   margin: 50px auto;
   font-family: Georgia, Helvetica, sans-serif;
   color: #857A6B;
+  text-align: center;
+}
+
+.form__button {
+  margin: 150px auto 20px auto;
   text-align: center;
 }
 
