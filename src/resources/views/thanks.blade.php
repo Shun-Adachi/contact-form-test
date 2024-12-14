@@ -10,13 +10,14 @@
 @endsection
 
 @section('content')
-<div class="thanks__content">
+<div class="thanks__content" method='get'>
   <div class="thanks__heading">
     <h2>お問い合わせありがとうございました</h2>
   </div>
   <div class="thanks__button">
     <form action="/">
-      <button class="thanks__button-submit" type="submit" formaction="/">HOME</button>
+      <button class="thanks__button-submit">HOME
+      </button>
     </form>
   </div>
 </div>

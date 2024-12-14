@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,38 +12,25 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-     return view('index');
-});
-Route::post('/index', function () {
-     return view('index');
+Route::prefix('/')->group(function () {
+    Route::get('/', [ContactController::class, 'index']);
+    Route::post('/', [ContactController::class, 'index']);
 });
 
-Route::post('/confirm', function () {
-     return view('confirm');
+Route::prefix('/confirm')->group(function () {
+    Route::post('/', [ContactController::class, 'confirm']);
+    Route::post('/create', [ContactController::class, 'store']);
 });
 
-
-Route::post('/admin', function () {
-     return view('admin');
+Route::prefix('/thanks')->group(function () {
+    Route::get('/', [ContactController::class, 'thanks']);
 });
 
-
-Route::get('/login', function () {
-     return view('login');
+Route::middleware('auth')->group(function () {
+    Route::get('/admin', [ContactController::class, 'admin']);
 });
 
-
-Route::get('/register', function () {
-     return view('register');
-});
-
-
-Route::post('/thanks', function () {
-     return view('thanks');
-});
-
-Route::post('/contact/search', function () {
-     return view('index');
-});
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/login'); // カスタムリダイレクト先
+})->name('logout');

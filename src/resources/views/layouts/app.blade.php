@@ -19,19 +19,36 @@
       <a class="header__logo" href="/">
         FashionablyLate
       </a>
-      @if($header_button === "login")
-      <a class="header__button" href="/login">
-        login
-      </a>
-      @elseif($header_button === "logout")
-      <a class="header__button" href="/login">
-        logout
-      </a>
-      @elseif($header_button === "register")
-      <a class="header__button" href="/register">
-        register
-      </a>
-      @endif
+
+
+      <nav>
+        <ul class="header-nav">
+          @if($header_button === "login")
+          <li class="header-nav__item">
+            <form class="header-nav-form" action="/login" method="get">
+              @csrf
+              <button class="header-nav__button">login</button>
+            </form>
+          </li>
+          @elseif($header_button === "register")
+          <li class="header-nav__item">
+            <form class="header-nav-form" action="/register" method="get">
+              @csrf
+              <button class="header-nav__button">register</button>
+            </form>
+          </li>
+          @endif
+          @if (Auth::check())
+          <li class="header-nav__item">
+            <form class="header-nav-form" action="/logout" method="post">
+              @csrf
+              <button class="header-nav__button">logout</button>
+            </form>
+          </li>
+          @endif
+
+        </ul>
+      <nav>
     </div>
 
   </header>

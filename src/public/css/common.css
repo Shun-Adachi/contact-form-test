@@ -34,7 +34,7 @@ textarea::placeholder {
   font-size: 28px;
 }
 
-.header__button {
+.header-nav {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -44,16 +44,29 @@ textarea::placeholder {
   width: 60px;
   height: 25px;
   line-height: 25px;
-  /* 高さと同じ値で縦方向の中央寄せ */
   margin: 10px 0px auto auto;
   padding-left: 5px;
   padding-right: 5px;
+  /* 高さと同じ値で縦方向の中央寄せ */
+}
+
+.header-nav__item {}
+
+.header-nav__button {}
+
+.header-nav-form {}
+
+.header-nav__button {
+  width: 100px;
+  height: 30px;
   font-family: Georgia, Helvetica, sans-serif;
   text-decoration: none;
   color: #D3C7B7;
   font-size: 14px;
   background: #f5f5f5;
   border: #D3C7B7 1px solid;
+  cursor: pointer;
+
 }
 
 .contact-form__content {
@@ -70,7 +83,7 @@ textarea::placeholder {
 }
 
 .form__button {
-  margin: 150px auto 20px auto;
+  margin: 180px auto 20px auto;
   text-align: center;
 }
 
@@ -82,4 +95,10 @@ textarea::placeholder {
   background: #857A6B;
   color: #f5f5f5;
   cursor: pointer;
+}
+
+.form__error {
+  color: #CC5D5D;
+  white-space: nowrap;
+  /* テキストを折り返さない */
 }

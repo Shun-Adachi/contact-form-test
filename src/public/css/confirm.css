@@ -28,7 +28,6 @@
 
 .confirm-table__text {
   padding: 20px;
-  padding-left: 30px;
   border: 1px solid #999;
   color: #857A6B;
 }
@@ -45,22 +44,30 @@
   min-height: 50px;
   background: #fff;
   color: #857A6B;
+  text-align: left;
   border: none;
   overflow: hidden;
   resize: none;
   outline: none;
-}
-
-.confirm-table__text textarea {
   overflow: visible;
 }
 
-.form__button {
+.confirm-form__button {
   margin-top: 30px;
   text-align: center;
 }
 
-.form__button--cancel {
+.confirm-form__button-submit {
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  background: #857A6B;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+.confirm-form__button--cancel {
   width: 100px;
   height: 30px;
   padding: 5px;
