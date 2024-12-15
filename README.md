@@ -12,7 +12,7 @@
 
 ```bash
 git clone <git@github.com>:Shun-Adachi/contact-form-test.git
-cd contact-form-text
+cd contact-form-test
 ```
 
 2. Dockerコンテナをビルドします。
@@ -68,7 +68,7 @@ php artisan db::seed
 
 ## ER図
 
-< - - - 作成したER図の画像 - - - >
+<img src="./chart/ER/ER.png" alt="サンプル画像" width="400">
 
 ## URL
 

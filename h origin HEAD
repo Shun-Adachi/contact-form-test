@@ -1,0 +1,59 @@
+[33mcommit 40efdf31cb1b9b2b4b2c6af9598744a24d91d79a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/base-features[m[33m)[m
+Author: shad <kotabe10@gmail.com>
+Date:   Sun Dec 15 23:24:04 2024 +0900
+
+    add README.md
+
+[33mcommit a37ad6f53a49ce7f9c2b57ee16758bdc54e5e696[m
+Author: shad <kotabe10@gmail.com>
+Date:   Sun Dec 15 22:16:21 2024 +0900
+
+    Imrement Function(login,admin)
+
+[33mcommit 424164f0c970ebd6e08983819047108c89f50e45[m
+Author: shad <kotabe10@gmail.com>
+Date:   Sun Dec 15 01:14:39 2024 +0900
+
+    WIP: Imprement Function (Login,Logout,Register,Contact,Confirm,Thanks)
+
+[33mcommit ccb616b284c3c6dd63f91057e08943916f37c614[m
+Author: shad <kotabe10@gmail.com>
+Date:   Sat Dec 14 10:54:45 2024 +0900
+
+    WIP Implement View Files(admin)
+
+[33mcommit 4fae119ee9f9c0525571cccff9070482e2e2ee24[m
+Author: shad <kotabe10@gmail.com>
+Date:   Sat Dec 14 07:28:49 2024 +0900
+
+    WIP: Implement View Files
+
+[33mcommit e03983bbb432af67f607806c6ed438d18cb3c52c[m
+Author: shad <kotabe10@gmail.com>
+Date:   Thu Dec 12 23:54:35 2024 +0900
+
+    WIP: Implement view files(confirm, thanks)
+
+[33mcommit 81b09028c1ff57d6cca038eace17e35b133f32f6[m
+Author: shad <kotabe10@gmail.com>
+Date:   Wed Dec 11 23:57:58 2024 +0900
+
+    WIP :Implement index view
+
+[33mcommit 279ca431c56235b92d82332533a788afa2507f83[m
+Author: shad <kotabe10@gmail.com>
+Date:   Tue Dec 10 23:33:39 2024 +0900
+
+    WIP: Add view files
+
+[33mcommit 4ad7001c702f82ab06a9bf4cde8dc4e164bda736[m
+Author: shad <kotabe10@gmail.com>
+Date:   Tue Dec 10 22:32:54 2024 +0900
+
+    clean drawio files
+
+[33mcommit b742fbc92d53db13e980b71ebc27d17a69bccc6b[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: shad <kotabe10@gmail.com>
+Date:   Tue Dec 10 22:05:21 2024 +0900
+
+    1st commit
