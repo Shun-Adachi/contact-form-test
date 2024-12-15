@@ -10,11 +10,11 @@
 @endsection
 
 @section('content')
-<div class="contact-form__content">
+<div class="confirm-form__content">
   <div class="section__title">
     <h2>Confirm</h2>
   </div>
-  <form class="form" action="/confirm/create" method="post">
+  <form class="confirm-form" action="/confirm/create" method="post">
     @csrf
     <div class="confirm-table">
       <table class="confirm-table__inner">
@@ -39,7 +39,7 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">メールアドレス</th>
           <td class="confirm-table__text">
-            <input type="email"
+            <input type="text"
                    name="email"
                    value="{{$contact['email']}}"
                    readonly />

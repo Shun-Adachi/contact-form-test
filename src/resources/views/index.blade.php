@@ -14,16 +14,16 @@
   <div class="section__title">
     <h2>Contact</h2>
   </div>
-  <form class="form" action="/confirm" method="post">
+  <form class="contact-form" action="/confirm" method="post">
     @csrf
     <!-- お名前 -->
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">お名前</span>
-        <span class="form__label--required">※</span>
+    <div class="contact-form__group">
+      <div class="contact-form__group-title">
+        <span class="contact-form__label--item">お名前</span>
+        <span class="contact-form__label--required">※</span>
       </div>
-      <div class="form__group-content">
-        <div class="form__input-lastname--text">
+      <div class="contact-form__group-content">
+        <div class="contact-form__input--text-lastname">
           <input type="text"
                  name="last_name"
                  placeholder="例: 山田"
@@ -34,7 +34,7 @@
             @enderror
           </div>
         </div>
-        <div class="form__input-firstname--text">
+        <div class="contact-form__input--text-firstname">
           <input type="text"
                  name="first_name"
                  placeholder="例: 太郎"
@@ -48,14 +48,14 @@
       </div>
     </div>
     <!-- 性別 -->
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">性別</span>
-        <span class="form__label--required">※</span>
+    <div class="contact-form__group">
+      <div class="contact-form__group-title">
+        <span class="contact-form__label--item">性別</span>
+        <span class="contact-form__label--required">※</span>
       </div>
-      <div class="form__group-content">
-        <div class="form__input--radio">
-          <label class="form__label--item">
+      <div class="contact-form__group-content">
+        <div class="contact-form__input--radio">
+          <label class="contact-form__label--item">
             <input type="radio"
                    name="gender"
                    value="1"
@@ -67,16 +67,16 @@
           @enderror
         </div>
         </div>
-        <div class="form__input--radio">
-          <label class="form__label--item">
+        <div class="contact-form__input--radio">
+          <label class="contact-form__label--item">
             <input type="radio"
                    name="gender"
                    value="2"
                    {{ old('gender', $contact['gender'] ?? '') == '2' ? 'checked' : '' }}> 女性
           </label>
         </div>
-        <div class="form__input--radio">
-          <label class="form__label--item">
+        <div class="contact-form__input--radio">
+          <label class="contact-form__label--item">
             <input type="radio"
                    name="gender"
                    value="3"
@@ -87,14 +87,14 @@
       </div>
     </div>
     <!-- メールアドレス -->
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">メールアドレス</span>
-        <span class="form__label--required">※</span>
+    <div class="contact-form__group">
+      <div class="contact-form__group-title">
+        <span class="contact-form__label--item">メールアドレス</span>
+        <span class="contact-form__label--required">※</span>
       </div>
-      <div class="form__group-content">
-        <div class="form__input--text">
-          <input type="email"
+      <div class="contact-form__group-content">
+        <div class="contact-form__input--text">
+          <input type="text"
                  name="email"
                  placeholder="例: test@example.com"
                  value="{{old('email', $contact['email'] ?? '')}}"/>
@@ -107,13 +107,13 @@
       </div>
     </div>
     <!-- 電話番号 -->
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">電話番号</span>
-        <span class="form__label--required">※</span>
+    <div class="contact-form__group">
+      <div class="contact-form__group-title">
+        <span class="contact-form__label--item">電話番号</span>
+        <span class="contact-form__label--required">※</span>
       </div>
-      <div class="form__group-content">
-        <div class="form__input-tel--text">
+      <div class="contact-form__group-content">
+        <div class="contact-form__input--text-tel">
           <input type="text"
                  name="tel_1"
                  placeholder="080"
@@ -128,19 +128,19 @@
             @endif
           </div>
         </div>
-        <div class="form__tel-dash">
-          <span class="form__label--item">-</span>
+        <div class="contact-form__tel-dash">
+          <span class="contact-form__label--item">-</span>
         </div>
-        <div class="form__input-tel--text">
+        <div class="contact-form__input--text-tel">
           <input type="text"
                  name="tel_2"
                  placeholder="1234"
                  value="{{old('tel_2', $contact['tel_2'] ?? '')}}"/>
         </div>
-        <div class="form__tel-dash">
+        <div class="contact-form__tel-dash">
           <span class="form__label--item">-</span>
         </div>
-        <div class="form__input-tel--text">
+        <div class="contact-form__input--text-tel">
           <input type="text"
                  name="tel_3"
                  placeholder="5678"
@@ -149,13 +149,13 @@
       </div>
     </div>
     <!-- 住所 -->
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">住所</span>
-        <span class="form__label--required">※</span>
+    <div class="contact-form__group">
+      <div class="contact-form__group-title">
+        <span class="contact-form__label--item">住所</span>
+        <span class="contact-form__label--required">※</span>
       </div>
-      <div class="form__group-content">
-        <div class="form__input--text">
+      <div class="contact-form__group-content">
+        <div class="contact-form__input--text">
           <input type="text"
                  name="address"
                  placeholder="例: 東京都渋谷区千駄ヶ谷1-2-3"
@@ -169,12 +169,12 @@
       </div>
     </div>
     <!-- 建物名 -->
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">建物名</span>
+    <div class="contact-form__group">
+      <div class="contact-form__group-title">
+        <span class="contact-form__label--item">建物名</span>
       </div>
-      <div class="form__group-content">
-        <div class="form__input--text">
+      <div class="contact-form__group-content">
+        <div class="contact-form__input--text">
           <input type="text"
                  name="building"
                  placeholder="例: 千駄ヶ谷マンション101"
@@ -183,13 +183,13 @@
       </div>
     </div>
     <!-- お問い合わせの種類 -->
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">お問い合わせの種類</span>
-        <span class="form__label--required">※</span>
+    <div class="contact-form__group">
+      <div class="contact-form__group-title">
+        <span class="contact-form__label--item">お問い合わせの種類</span>
+        <span class="contact-form__label--required">※</span>
       </div>
-      <div class="form__group-content">
-        <div class="form__select">
+      <div class="contact-form__group-content">
+        <div class="contact-form__select">
           <select name="category_id">
             <option value="">選択してください</option>
             @foreach ($categories as $category)
@@ -208,13 +208,13 @@
       </div>
     </div>
     <!-- お問い合わせ内容 -->
-    <div class="form__group">
-      <div class="form__group-title">
-        <span class="form__label--item">お問い合わせ内容</span>
-        <span class="form__label--required">※</span>
+    <div class="contact-form__group">
+      <div class="contact-form__group-title">
+        <span class="contact-form__label--item">お問い合わせ内容</span>
+        <span class="contact-form__label--required">※</span>
       </div>
-      <div class="form__group-content">
-        <div class="form__textarea">
+      <div class="contact-form__group-content">
+        <div class="contact-form__textarea">
           <textarea name="detail"
                     placeholder="お問い合わせ内容をご記載ください">{{old('detail', $contact['detail'] ?? '')}}</textarea>
           <div class="form__error">
@@ -225,8 +225,8 @@
         </div>
       </div>
     </div>
-    <div class="form__button">
-      <button class="form__button-submit" type="submit">確認画面</button>
+    <div class="contact-form__button">
+      <button class="contact-form__button-submit" type="submit">確認画面</button>
     </div>
   </form>
 </div>

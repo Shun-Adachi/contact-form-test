@@ -28,7 +28,7 @@
 }
 
 .search-form__select--gender {
-  width: 60px;
+  width: 90px;
   height: 100%;
   margin: 0 5px;
   background: #f5f5f5;
@@ -67,49 +67,69 @@
   background: #857A6B;
   color: #FFFFFF;
   border: #D3C7B7 1px solid;
+  cursor: pointer;
 }
 
 .search-form__button-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 100%;
+  padding: 0;
+  border: #D3C7B7 1px solid;
   background: #D3C7B7;
   color: #FFFFFF;
-  border: #D3C7B7 1px solid;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
 }
 
 .table-controls {
-  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto 5px auto;
   width: 100%;
   height: 30px;
   max-width: 1230px;
-  display: flex;
-  justify-content: space-between;
 }
 
-.export-form {}
+.export__button {
+  padding-left: 5px
+}
 
-.table-export {}
-
-.table-export__button-submit {
+.export__button-submit {
   width: 100px;
-  height: 100%;
-  background: #ECEAE6;
+  height: 30px;
   box-sizing: border-box;
+  border: #D3C7B7 1px solid;
+  background: #ECEAE6;
   color: #857A6B;
-  border: #D3C7B7 1px solid;
-  width: 100px;
+  cursor: pointer;
 }
 
-.table-pagenation {
-  width: 100px;
-}
+.pagination-outline {}
 
-tbody {
+.pagination {
   margin: 0;
-  padding: 0;
-  border: #D3C7B7 1px solid;
+  display: flex;
+  justify-content: right;
 }
 
+.page-item {
+  margin: 0px 3px;
+}
+
+.page-link {
+  display: flex;
+  margin: 0px 3px;
+}
+
+svg.w-5.h-5 {
+  /*paginateメソッドの矢印の大きさ調整のために追加*/
+  width: 30px;
+  height: 30px;
+}
 
 .admin-table {
   margin: 0 auto;
@@ -121,6 +141,12 @@ tbody {
   /* セル間のスペーシングをなくす */
 }
 
+.admin-table tbody {
+  margin: 0;
+  padding: 0;
+  border: #D3C7B7 1px solid;
+}
+
 .admin-table__inner {
   width: 100%;
   border: #D3C7B7 1px solid;
@@ -129,7 +155,6 @@ tbody {
 
 .admin-table__row {
   height: 50px;
-
 }
 
 .admin-table__row th {
@@ -142,55 +167,38 @@ tbody {
   color: #857A6B;
 }
 
-
-.admin-table__header--name {
-  width: 15%;
-  padding-left: 40px;
+.admin-table__row td:last-child,
+.admin-table__row td:last-child {
+  padding-right: 10px;
 }
 
-.admin-table__header--gender {
-  width: 10%;
-  padding-left: 40px;
-}
-
-.admin-table__header--email {
-  width: 20%;
-  padding-left: 40px;
-}
-
-.admin-table__header--category {
-  width: 20%;
-  padding-left: 40px;
-}
-
-.admin-table__header--blank {
-  width: 15%;
-  padding-left: 40px;
-}
-
+.admin-table__header--name,
 .admin-table__content--name {
-  width: 20%;
-  padding-left: 40px;
-}
-
-.admin-table__content--gender {
-  width: 10%;
-  padding-left: 40px;
-}
-
-.admin-table__content--email {
   width: 25%;
   padding-left: 40px;
 }
 
+.admin-table__header--gender,
+.admin-table__content--gender {
+  width: 5%;
+}
+
+.admin-table__header--email,
+.admin-table__content--email {
+  width: 30%;
+  padding-left: 40px;
+}
+
+.admin-table__header--category,
 .admin-table__content--category {
   width: 30%;
   padding-left: 40px;
 }
 
-.admin-table__button {
-  width: 15%;
-  padding-left: 40px;
+.admin-table__header--blank,
+.admin-table__content--button {
+  width: 5%;
+  padding-right: 0px;
 }
 
 .admin-table__button-submit {
@@ -212,18 +220,17 @@ tbody {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* 半透明の背景 */
   justify-content: center;
   align-items: center;
 }
 
 .modal-content {
   position: relative;
-  background-color: white;
   padding: 20px;
-  border-radius: 5px;
+  width: 85%;
+  background-color: white;
+  border: 1px #D3C7B7 solid;
   text-align: center;
-  width: 300px;
 }
 
 /* 閉じるボタン（右上） */
@@ -235,7 +242,7 @@ tbody {
   border: none;
   font-size: 20px;
   font-weight: bold;
-  color: #333;
+  color: #857A6B;
   cursor: pointer;
 }
 
@@ -244,9 +251,50 @@ tbody {
   /* ホバー時の色 */
 }
 
-/* 下部閉じるボタン */
-.close-btn {
-  margin-top: 10px;
+.modal-table {
+  padding: 10px;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  color: #857A6B;
+  border: none;
+}
+
+.modal-table__inner {
+  width: 100%;
+}
+
+.modal-table__row {
+  vertical-align: top;
+}
+
+.modal-table__header {
+  width: 30%;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.modal-table__content {
+  width: 70%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.modal-table__content textarea {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  color: #857A6B;
+  border: none;
+  overflow: visible;
+  resize: none;
+  outline: none;
+}
+
+.remove-btn {
+  margin: 10px auto;
   padding: 10px 20px;
   background-color: #f44336;
   color: white;
@@ -255,21 +303,6 @@ tbody {
   cursor: pointer;
 }
 
-.close-btn:hover {
+.remove-btn:hover {
   background-color: #d32f2f;
-}
-
-.modal-table__content textarea {
-  width: 100%;
-  min-height: 50px;
-  background: #fff;
-  color: #857A6B;
-  border: none;
-  overflow: hidden;
-  resize: none;
-  outline: none;
-}
-
-.modal-table__content textarea {
-  overflow: visible;
 }

@@ -17,19 +17,29 @@
   <form class="account-form" action="/login" method="post">
     @csrf
     <div class="account-form__group">
-      <div class="account-form__group-title">
+      <div class="account-form__title">
         <span class="account-form__label--emali">メールアドレス</span>
       </div>
-      <div class="account-form__input--text">
-        <input type="email" name="email" placeholder="例: text@example.com" value=""/>
+      <div class="account-form__input">
+        <input type="text" name="email" placeholder="例: text@example.com" value="{{old('email')}}"/>
+        <div class="form__error">
+          @error('email')
+          {{ $message }}
+          @enderror
+        </div>
       </div>
     </div>
     <div class="account-form__group">
-      <div class="account-form__group-title">
+      <div class="account-form__title">
         <span class="account-form__label--password">パスワード</span>
       </div>
-      <div class="account-form__input--text">
+      <div class="account-form__input">
         <input type="password" name="password" placeholder=" 例: coachtech1106"/>
+        <div class="form__error">
+          @error('password')
+          {{ $message }}
+          @enderror
+        </div>
       </div>
     </div>
     <div class="account-form__button">

@@ -27,7 +27,12 @@ Route::prefix('/thanks')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/admin', [ContactController::class, 'admin']);
+     Route::prefix('/admin')->group(function () {
+          Route::get('/', [ContactController::class, 'admin']);
+          Route::get('/search', [ContactController::class, 'search']);
+          Route::get('/export', [ContactController::class, 'export']);
+          Route::delete('/delete', [ContactController::class, 'destroy']);
+     });
 });
 
 Route::post('/logout', function () {

@@ -1,3 +1,4 @@
+/*** tag ***/
 body {
   margin: 0;
 }
@@ -10,6 +11,7 @@ textarea::placeholder {
   opacity: 0.5;
 }
 
+/*** header ***/
 .header {
   height: 80px;
   border-bottom: #ccc 1px solid;
@@ -17,11 +19,13 @@ textarea::placeholder {
 
 .header__inner {
   position: relative;
-  height: 100%;
-  padding: 20px 0px;
-  vertical-align: middle;
   display: flex;
   justify-content: space-between;
+  height: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 20px 0px;
+  vertical-align: middle;
   box-sizing: border-box;
 }
 
@@ -35,19 +39,15 @@ textarea::placeholder {
 }
 
 .header-nav {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  /* 親要素が複数行の場合 */
   position: absolute;
   right: 5%;
   width: 60px;
   height: 25px;
   line-height: 25px;
-  margin: 10px 0px auto auto;
+  margin: 10px 20px auto auto;
   padding-left: 5px;
   padding-right: 5px;
-  /* 高さと同じ値で縦方向の中央寄せ */
+  text-align: center;
 }
 
 .header-nav__item {}
@@ -69,25 +69,78 @@ textarea::placeholder {
 
 }
 
-.contact-form__content {
-  margin: 0 auto;
-  text-align: center;
-  max-width: 800px;
-}
-
 .section__title {
-  margin: 50px auto;
+  margin: 40px auto;
   font-family: Georgia, Helvetica, sans-serif;
   color: #857A6B;
   text-align: center;
 }
 
-.form__button {
-  margin: 180px auto 20px auto;
-  text-align: center;
+.form__error {
+  color: #CC5D5D;
+  font-size: 12px;
+  text-align: left;
+  white-space: nowrap;
 }
 
-.form__button-submit {
+.alert__message--success {
+  padding: 5px 15px;
+  font-weight: bold;
+  color: #0f5132;
+  background: #d1e7dd;
+  border-color: #badbcc;
+}
+
+/*** login,register ***/
+.account__content {
+  margin: 0 auto;
+  height: calc(100vh - 81px);
+  text-align: center;
+  background-color: #EFECE7;
+}
+
+.account-section__title {
+  margin: 0px auto;
+  padding-top: 30px;
+  font-family: Georgia, Helvetica, sans-serif;
+  color: #857A6B;
+}
+
+.account-form__group {
+  width: 70%;
+  margin: 20px auto 50px auto;
+}
+
+.account-form__title {
+  width: 100%;
+  height: 30px;
+  margin: 0px auto;
+  text-align: left;
+  color: #857A6B;
+
+}
+
+.account-form__input {
+  width: 100%;
+  height: 30px;
+  margin: 0px auto;
+}
+
+.account-form__input input {
+  width: 100%;
+  height: 30px;
+  padding-left: 20px;
+  color: #857A6B;
+  background: #f5f5f5;
+  border: none;
+  box-sizing: border-box;
+}
+
+.account-form__button {
+  margin: 20px auto;
+}
+
+.account-form__button-submit {
   width: 100px;
   height: 30px;
   padding: 5px;
@@ -95,10 +148,4 @@ textarea::placeholder {
   background: #857A6B;
   color: #f5f5f5;
   cursor: pointer;
-}
-
-.form__error {
-  color: #CC5D5D;
-  white-space: nowrap;
-  /* テキストを折り返さない */
 }
