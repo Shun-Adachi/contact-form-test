@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "0ed681adcd27ac77fde410decb4f6729",
+=======
+    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+>>>>>>> b742fbc (1st commit)
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -63,6 +67,7 @@
             "time": "2023-11-14T13:51:46+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "bacon/bacon-qr-code",
             "version": "2.0.8",
             "source": {
@@ -117,6 +122,8 @@
             "time": "2022-12-07T17:46:57+00:00"
         },
         {
+=======
+>>>>>>> b742fbc (1st commit)
             "name": "brick/math",
             "version": "0.9.3",
             "source": {
@@ -246,6 +253,7 @@
             "time": "2023-12-11T17:09:12+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "dasprid/enum",
             "version": "1.0.6",
             "source": {
@@ -296,6 +304,8 @@
             "time": "2024-08-09T14:30:48+00:00"
         },
         {
+=======
+>>>>>>> b742fbc (1st commit)
             "name": "dflydev/dot-access-data",
             "version": "v3.0.3",
             "source": {
@@ -1138,6 +1148,7 @@
             "time": "2024-07-18T11:15:46+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "laravel/fortify",
             "version": "v1.19.1",
             "source": {
@@ -1202,6 +1213,8 @@
             "time": "2023-12-11T16:16:45+00:00"
         },
         {
+=======
+>>>>>>> b742fbc (1st commit)
             "name": "laravel/framework",
             "version": "v8.83.29",
             "source": {
@@ -2386,6 +2399,7 @@
             "time": "2022-01-27T09:35:39+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "paragonie/constant_time_encoding",
             "version": "v2.7.0",
             "source": {
@@ -2453,6 +2467,8 @@
             "time": "2024-05-08T12:18:48+00:00"
         },
         {
+=======
+>>>>>>> b742fbc (1st commit)
             "name": "phpoption/phpoption",
             "version": "1.9.3",
             "source": {
@@ -2528,6 +2544,7 @@
             "time": "2024-07-20T21:41:07+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "pragmarx/google2fa",
             "version": "v8.0.3",
             "source": {
@@ -2580,6 +2597,8 @@
             "time": "2024-09-05T11:56:40+00:00"
         },
         {
+=======
+>>>>>>> b742fbc (1st commit)
             "name": "psr/clock",
             "version": "1.0.0",
             "source": {
@@ -6198,6 +6217,7 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "laravel-lang/lang",
             "version": "7.0.9",
             "source": {
@@ -6243,6 +6263,8 @@
             "time": "2020-11-30T20:35:41+00:00"
         },
         {
+=======
+>>>>>>> b742fbc (1st commit)
             "name": "laravel/sail",
             "version": "v1.19.0",
             "source": {
