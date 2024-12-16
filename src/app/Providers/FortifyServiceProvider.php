@@ -33,6 +33,19 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.register');
         });
 
+        // ユーザー登録後にログインさせず、ログインページにリダイレクト
+        $this->app->singleton(\Laravel\Fortify\Contracts\RegisterResponse::class, function ($app) {
+            return new class implements \Laravel\Fortify\Contracts\RegisterResponse {
+                public function toResponse($request)
+                {
+                    \Log::info('RegisterResponse triggered');
+                    \Log::info('User authenticated: ' . (auth()->check() ? 'yes' : 'no'));
+                    auth()->logout();
+                    return redirect('/login'); // 登録後にリダイレクトするページ
+                }
+            };
+        });
+
         Fortify::loginView(function () {
             return view('auth.login');
         });
