@@ -80,11 +80,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'locale' => 'ja',
-=======
-    'locale' => 'en',
->>>>>>> b742fbc (1st commit)
 
     /*
     |--------------------------------------------------------------------------
@@ -178,11 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-<<<<<<< HEAD
         App\Providers\FortifyServiceProvider::class,
-=======
-
->>>>>>> b742fbc (1st commit)
     ],
 
     /*
